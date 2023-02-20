@@ -6,6 +6,7 @@
  */
 
 import React from 'react';
+import './environments';
 import {
   SafeAreaView,
   ScrollView,
@@ -23,6 +24,7 @@ function App(): JSX.Element {
       <ScrollView
         style={[styles.container]}
         contentInsetAdjustmentBehavior="automatic">
+        <Text style={[styles.title]}>{BRAND}</Text>
         <Text style={[styles.title]}>{whiteLabelConfig.APP_NAME}</Text>
         <Text style={[styles.text]}>{whiteLabelConfig.GREETING_TEXT}</Text>
       </ScrollView>
