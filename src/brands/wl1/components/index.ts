@@ -1,1 +1,1 @@
-export {SubTitle} from './SubTitle';
+export {Button} from './Button';

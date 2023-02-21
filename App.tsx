@@ -11,7 +11,7 @@ import {Image, SafeAreaView, StatusBar, StyleSheet, Text} from 'react-native';
 
 import whiteLabelConfig from './whitelabel/WhiteLabelConfig';
 import {Header} from '@genericComponents';
-import {SubTitle} from '@components';
+import {Button} from '@components';
 import {Banner} from '@assets';
 
 function App(): JSX.Element {
@@ -19,9 +19,9 @@ function App(): JSX.Element {
     <SafeAreaView style={[styles.container]}>
       <StatusBar barStyle={'dark-content'} />
       <Header title={BRAND} />
-      <SubTitle />
       <Image source={Banner} />
       <Text style={[styles.title]}>{whiteLabelConfig.APP_NAME}</Text>
+      <Button />
       <Text style={[styles.text]}>{whiteLabelConfig.GREETING_TEXT}</Text>
     </SafeAreaView>
   );
