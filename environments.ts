@@ -1,7 +1,6 @@
 import DeviceInfo from 'react-native-device-info';
 
 const bundleId = DeviceInfo.getBundleId();
-console.log('bundleId', bundleId);
 let env;
 
 if (bundleId.includes('wl1')) env = require('./env.wl1.json');

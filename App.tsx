@@ -7,34 +7,33 @@
 
 import React from 'react';
 import './environments';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-} from 'react-native';
+import {Image, SafeAreaView, StatusBar, StyleSheet, Text} from 'react-native';
 
 import whiteLabelConfig from './whitelabel/WhiteLabelConfig';
+import {Header} from '@genericComponents';
+import {SubTitle} from '@components';
+import {Banner} from '@assets';
 
 function App(): JSX.Element {
   return (
-    <SafeAreaView>
+    <SafeAreaView style={[styles.container]}>
       <StatusBar barStyle={'dark-content'} />
-      <ScrollView
-        style={[styles.container]}
-        contentInsetAdjustmentBehavior="automatic">
-        <Text style={[styles.title]}>{BRAND}</Text>
-        <Text style={[styles.title]}>{whiteLabelConfig.APP_NAME}</Text>
-        <Text style={[styles.text]}>{whiteLabelConfig.GREETING_TEXT}</Text>
-      </ScrollView>
+      <Header title={BRAND} />
+      <SubTitle />
+      <Image source={Banner} />
+      <Text style={[styles.title]}>{whiteLabelConfig.APP_NAME}</Text>
+      <Text style={[styles.text]}>{whiteLabelConfig.GREETING_TEXT}</Text>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
+    justifyContent: 'space-between',
+    alignItems: 'center',
     backgroundColor: whiteLabelConfig.PRIMARY_COLOR,
+    paddingVertical: 26,
   },
   title: {
     fontSize: 32,
